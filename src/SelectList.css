@@ -1,0 +1,9 @@
+.form-mandate,
+.form-committee {
+  width: 30%;
+}
+
+.form-mandate label,
+.form-committee label {
+  padding-right: 1%;
+}

@@ -1,0 +1,39 @@
+.box {
+  position: relative;
+  margin: 1% 0;
+}
+
+.box input {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin: 1%;
+  width: 320px;
+  background: none;
+  padding: 2% 2% 2% 1%;
+  display: block;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #ffffff;
+}
+
+.box input {
+  outline: none;
+}
+
+.box label {
+  font-size: 1.2rem;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  -webkit-transition: 300ms ease all;
+  transition: 300ms ease all;
+}
+
+.box input:focus ~ label,
+.box input:valid ~ label {
+  color: #1470b3;
+  top: -14px;
+  font-size: 1rem;
+}

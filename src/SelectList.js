@@ -1,5 +1,6 @@
 import React from "react";
 import Select from "./Select";
+import "./SelectList.css";
 
 const mandates = [
   { value: 7 },
@@ -37,8 +38,8 @@ const SelectList = props => {
   });
   return (
     <>
-      <form>
-        <label htmlFor="mandate">Ilość mandatów </label>
+      <form className="form-mandate">
+        <label htmlFor="mandate">Ilość mandatów w okręgu</label>
         <select
           name="mandate"
           id="mandate"
@@ -47,8 +48,7 @@ const SelectList = props => {
           {mandatesList}
         </select>
       </form>
-      <br />
-      <form>
+      <form className="form-committee">
         <label htmlFor="committee">Ilość komitetów </label>
         <select
           name="committee"
@@ -58,7 +58,6 @@ const SelectList = props => {
           {committeeList}
         </select>
       </form>
-      <br />
     </>
   );
 };

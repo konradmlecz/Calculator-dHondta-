@@ -142,11 +142,15 @@ class App extends Component {
 
     return (
       <div className="App">
-        <SelectList
-          handleSelectMandate={this.handleSelectMandate}
-          handleSelectCommittee={this.handleSelectCommittee}
-        />
-        {inputCommittee}
+        <header>Kalkulator metody d’Hondta</header>
+        <div className="select">
+          <SelectList
+            handleSelectMandate={this.handleSelectMandate}
+            handleSelectCommittee={this.handleSelectCommittee}
+          />
+        </div>
+        <div className="input">{inputCommittee}</div>
+
         {this.state.displayResault && (
           <DisplayResualtList
             committees={this.state.committees}

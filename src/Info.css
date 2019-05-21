@@ -1,0 +1,13 @@
+.info {
+  padding: 2%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 100;
+  background-color: #1470b3;
+}
+.info p {
+  line-height: 2rem;
+}

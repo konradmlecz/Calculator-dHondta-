@@ -40,3 +40,58 @@ header {
   justify-content: center;
   align-items: center;
 }
+
+i {
+  font-size: 2.5rem;
+  position: fixed;
+  right: 4%;
+  bottom: 4%;
+  animation-name: shiver;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  cursor: pointer;
+}
+i:hover {
+  animation-name: none;
+  transform: scale(1.3);
+}
+
+@keyframes shiver {
+  0% {
+    right: 4%;
+  }
+  90% {
+    right: 4%;
+  }
+  91% {
+    right: 5%;
+  }
+  92% {
+    right: 3.5%;
+  }
+  93% {
+    right: 4.5%;
+  }
+  94% {
+    right: 3.5%;
+  }
+
+  95% {
+    right: 4.5%;
+  }
+  96% {
+    right: 3.5%;
+  }
+  97% {
+    right: 4.5%;
+  }
+  98% {
+    right: 3.5%;
+  }
+  99% {
+    right: 4%;
+  }
+  100% {
+    right: 4%;
+  }
+}

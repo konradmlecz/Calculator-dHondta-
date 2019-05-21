@@ -3,9 +3,11 @@ import "./App.css";
 import SelectList from "./SelectList";
 import InputCommittee from "./InputCommittee";
 import DisplayResualtList from "./DisplayResualtList";
+import Info from "./Info";
 
 class App extends Component {
   state = {
+    info: false,
     mandate: 7,
     sumOfVotes: 0,
     displayResault: false,
@@ -80,6 +82,7 @@ class App extends Component {
     for (let index = 0; index < committees.length; index++) {
       sumOfVotes += committees[index].vote;
     }
+    console.log(sumOfVotes);
     const numbers = [];
 
     for (let y = 0; y < committees.length; y++) {
@@ -92,15 +95,16 @@ class App extends Component {
       }
       numbers.push(number);
     }
-
+    console.log(numbers);
     const numbers2 = [];
     for (let z = 0; z < numbers.length; z++) {
       numbers2.push(...numbers[z]);
     }
 
     numbers2.sort((a, b) => b.n - a.n);
+    console.log(numbers2);
     const numbers3 = numbers2.splice(0, mandate);
-
+    console.log(numbers3);
     committees.forEach(committee => {
       let mandate = 0;
       numbers3.forEach(item => {
@@ -129,6 +133,12 @@ class App extends Component {
     });
     this.setState({ displayResault });
   };
+
+  setInfo = info => {
+    this.setState({
+      info: info
+    });
+  };
   render() {
     const inputCommittee = this.state.committees.map(committee => {
       return (
@@ -141,24 +151,27 @@ class App extends Component {
     });
 
     return (
-      <div className="App">
-        <header>Kalkulator metody d’Hondta</header>
-        <div className="select">
-          <SelectList
-            handleSelectMandate={this.handleSelectMandate}
-            handleSelectCommittee={this.handleSelectCommittee}
-          />
+      <>
+        <div className="App">
+          <header>Kalkulator metody d’Hondta</header>
+          <div className="select">
+            <SelectList
+              handleSelectMandate={this.handleSelectMandate}
+              handleSelectCommittee={this.handleSelectCommittee}
+            />
+          </div>
+          <div className="input">{inputCommittee}</div>
+          {this.state.displayResault && (
+            <DisplayResualtList
+              committees={this.state.committees}
+              sumOfVotes={this.state.sumOfVotes}
+              mandate={this.state.mandate}
+            />
+          )}
         </div>
-        <div className="input">{inputCommittee}</div>
-
-        {this.state.displayResault && (
-          <DisplayResualtList
-            committees={this.state.committees}
-            sumOfVotes={this.state.sumOfVotes}
-            mandate={this.state.mandate}
-          />
-        )}
-      </div>
+        <i className="fas fa-info" onClick={() => this.setInfo(true)} />
+        {this.state.info && <Info setInfo={this.setInfo} />}
+      </>
     );
   }
 }

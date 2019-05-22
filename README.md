@@ -1,6 +1,7 @@
 # Calculator method d’Hondta
 
 It's simple calculator which shows how mandates be diveded beetwen committees. Exemplify situation in the precinct.
+https://konradmlecz.github.io/Calculator-dHondta-/
 
 # Apps works
 

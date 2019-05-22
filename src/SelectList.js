@@ -38,8 +38,9 @@ const SelectList = props => {
   });
   return (
     <>
-      <form className="form-mandate">
-        <label htmlFor="mandate">Ilość mandatów w okręgu</label>
+      {" "}
+      <form>
+        <label htmlFor="mandate">Ilość mandatów w okręgu:</label>
         <select
           name="mandate"
           id="mandate"
@@ -48,8 +49,8 @@ const SelectList = props => {
           {mandatesList}
         </select>
       </form>
-      <form className="form-committee">
-        <label htmlFor="committee">Ilość komitetów </label>
+      <form>
+        <label htmlFor="committee">Ilość komitetów:</label>
         <select
           name="committee"
           id="committee"

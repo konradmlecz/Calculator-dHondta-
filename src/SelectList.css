@@ -1,9 +1,7 @@
-.form-mandate,
-.form-committee {
-  width: 30%;
+.select label,
+.select select {
+  margin: 3px;
 }
-
-.form-mandate label,
-.form-committee label {
-  padding-right: 1%;
+select {
+  cursor: pointer;
 }

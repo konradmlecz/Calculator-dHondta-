@@ -82,7 +82,6 @@ class App extends Component {
     for (let index = 0; index < committees.length; index++) {
       sumOfVotes += committees[index].vote;
     }
-    console.log(sumOfVotes);
     const numbers = [];
 
     for (let y = 0; y < committees.length; y++) {
@@ -95,16 +94,12 @@ class App extends Component {
       }
       numbers.push(number);
     }
-    console.log(numbers);
     const numbers2 = [];
     for (let z = 0; z < numbers.length; z++) {
       numbers2.push(...numbers[z]);
     }
-
     numbers2.sort((a, b) => b.n - a.n);
-    console.log(numbers2);
     const numbers3 = numbers2.splice(0, mandate);
-    console.log(numbers3);
     committees.forEach(committee => {
       let mandate = 0;
       numbers3.forEach(item => {
@@ -115,7 +110,6 @@ class App extends Component {
       committee.mandates = mandate;
       return committee;
     });
-    console.log(committees);
     if (this.state.sumOfVotes !== sumOfVotes) {
       this.setState({
         sumOfVotes
@@ -128,8 +122,6 @@ class App extends Component {
     let displayResault = true;
     committes.forEach(committe => {
       if (!(committe.name && committe.vote)) displayResault = false;
-      console.log(Boolean(committe.name));
-      console.log(Boolean(committe.vote));
     });
     this.setState({ displayResault });
   };

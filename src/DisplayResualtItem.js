@@ -12,7 +12,7 @@ const DisplayResualtItem = props => {
   return (
     <>
       <li>
-        Komitet {props.committee.name} uzyskał{" "}
+        Komitet {props.committee.name} zdobył{" "}
         <span>{props.committee.mandates}</span> {mandateName()}, przy{" "}
         {((props.committee.vote / props.sumOfVotes) * 100).toFixed(2)} % głosów
       </li>

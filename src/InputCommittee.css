@@ -7,7 +7,7 @@
   color: #ffffff;
   font-size: 1.2rem;
   margin: 1%;
-  width: 320px;
+  width: 250px;
   background: none;
   padding: 2% 2% 2% 1%;
   display: block;
@@ -35,5 +35,24 @@
 .box input:valid ~ label {
   color: #1470b3;
   top: -14px;
-  font-size: 1rem;
+  font-size: 0rem;
+}
+
+@media screen and (max-width: 740px) {
+  .box label {
+    font-size: 1rem;
+    left: 5px;
+    top: 6px;
+  }
+
+  .box input {
+    font-size: 1rem;
+    width: 220px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .box input {
+    width: 120px;
+  }
 }

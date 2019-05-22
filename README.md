@@ -7,7 +7,7 @@ It's simple calculator which shows how mandates be diveded beetwen committees. E
 1. You may select numbers committees and mandates.
 2. Later you define names of committees and amount of votes.
 3. Then you app displays division mandates.
-4. You read further info.
+4. You may read further info.
 
 # Technology
 
